@@ -1,0 +1,44 @@
+[user]
+	name = Jakub Krčma
+	email = jkrcma@gmail.com
+[core]
+	excludesfile = /home/dragonjake/.gitignore
+	editor = vim
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	lc = log ORIG_HEAD.. --stat --no-merges
+	lg = log -p
+	st = status
+	who = shortlog -s --
+	ex = "!sh -c 'git diff $0 --name-only | while read files; do mkdir -p \"$1/$(dirname $files)\"; cp -vf $files $1/$(dirname $files); done'"
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[merge]
+	summary = true
+[gui]
+	recentrepo = /home/dragonjake/Projekty/eshop
+	recentrepo = /home/dragonjake/Projekty/umms
+	recentrepo = /home/dragonjake/Projekty/cms
+	recentrepo = /home/dragonjake/Projekty/skeleton
+	recentrepo = /home/dragonjake/Projekty/indekorace
+	recentrepo = /home/dragonjake/Projekty/obrazkovac
+	fontui = -family Ubuntu -size 9 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"DejaVu Sans Mono\" -size 8 -weight normal -slant roman -underline 0 -overstrike 0
+	recentrepo = /home/dragonjake/Projekty/aceit/eshop-skeleton
+	recentrepo = /home/dragonjake/Projekty/aceit/eshop-libs
+	recentrepo = /home/dragonjake/Projekty/speedfile
+	recentrepo = /home/dragonjake/Projekty/aceit/offroadshop
+[color]
+	sh = auto
+	ui = auto
+[color "sh"]
+	workdir = green bold
+	branch = yellow bold
+[gitsh]
+	dirty = *
+[color "branch"]
+[color "branch"]
+	local = yellow
