@@ -19,18 +19,8 @@
 [merge]
 	summary = true
 [gui]
-	recentrepo = /home/dragonjake/Projekty/eshop
-	recentrepo = /home/dragonjake/Projekty/umms
-	recentrepo = /home/dragonjake/Projekty/cms
-	recentrepo = /home/dragonjake/Projekty/skeleton
-	recentrepo = /home/dragonjake/Projekty/indekorace
-	recentrepo = /home/dragonjake/Projekty/obrazkovac
 	fontui = -family Ubuntu -size 9 -weight normal -slant roman -underline 0 -overstrike 0
 	fontdiff = -family \"DejaVu Sans Mono\" -size 8 -weight normal -slant roman -underline 0 -overstrike 0
-	recentrepo = /home/dragonjake/Projekty/aceit/eshop-skeleton
-	recentrepo = /home/dragonjake/Projekty/aceit/eshop-libs
-	recentrepo = /home/dragonjake/Projekty/speedfile
-	recentrepo = /home/dragonjake/Projekty/aceit/offroadshop
 [color]
 	sh = auto
 	ui = auto
@@ -40,5 +30,5 @@
 [gitsh]
 	dirty = *
 [color "branch"]
-[color "branch"]
 	local = yellow
+

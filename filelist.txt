@@ -1,0 +1,6 @@
+.ssh/config
+.gitconfig
+.gitk
+.gitshrc
+.vimrc
+
