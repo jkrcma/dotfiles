@@ -11,7 +11,8 @@
 	lc = log ORIG_HEAD.. --stat --no-merges
 	lg = log -p
 	st = status
-	who = shortlog -s --
+	who = shortlog -sn --
+	count = "!sh -c 'git shortlog -s | awk \"{ SUM += \\$1 } END { print SUM }\"'"
 	ex = "!sh -c 'git diff $0 --name-only | while read files; do mkdir -p \"$1/$(dirname $files)\"; cp -vf $files $1/$(dirname $files); done'"
 [branch "master"]
 	remote = origin
