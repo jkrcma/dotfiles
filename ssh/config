@@ -41,5 +41,12 @@ Host fourstock.no.de
 	ForwardAgent yes
 	LocalForward 5984 127.0.0.1:5984
 
+
+# iinfo.cz
+Host plch
+	Hostname plch.iinfo.cz
+	User krcma
+	ForwardAgent no
+
 # vim:ts=4
 
