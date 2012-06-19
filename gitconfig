@@ -9,7 +9,7 @@
 	ci = commit
 	co = checkout
 	lc = log ORIG_HEAD.. --stat --no-merges
-	lg = log -p
+	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 	st = status
 	who = shortlog -sn --
 	count = "!sh -c 'git shortlog -s | awk \"{ SUM += \\$1 } END { print SUM }\"'"

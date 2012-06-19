@@ -48,5 +48,10 @@ Host plch
 	User krcma
 	ForwardAgent no
 
+Host web4
+	Hostname web4.iinfo.cz
+	User krcma
+	ForwardAgent no
+
 # vim:ts=4
 
