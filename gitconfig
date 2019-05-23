@@ -1,27 +1,28 @@
 [user]
-	name = Jakub Krčma
-	email = jkrcma@gmail.com
+	name = Jakub Krcma
+	email = jakub.krcma@heureka.cz
+	signingkey = 08BCD7F2B399EED2
 [core]
-	excludesfile = /home/dragonjake/.gitignore
+	excludesfile = ~/.gitignore
 	editor = vim
+	autocrlf = input
+;	autocrlf = input
 [alias]
 	br = branch
 	ci = commit
 	co = checkout
 	lc = log ORIG_HEAD.. --stat --no-merges
 	lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+	out = !GIT_PAGER= git log --pretty=oneline --abbrev-commit --graph @{u}..
+	in = !git fetch && GIT_PAGER= git log --pretty=oneline --abbrev-commit --graph ..@{u}
 	st = status
 	who = shortlog -sn --
 	count = "!sh -c 'git shortlog -s | awk \"{ SUM += \\$1 } END { print SUM }\"'"
 	ex = "!sh -c 'git diff $0 --name-only | while read files; do mkdir -p \"$1/$(dirname $files)\"; cp -vf $files $1/$(dirname $files); done'"
-[branch "master"]
-	remote = origin
-	merge = refs/heads/master
 [merge]
 	summary = true
-[gui]
-	fontui = -family Ubuntu -size 9 -weight normal -slant roman -underline 0 -overstrike 0
-	fontdiff = -family \"DejaVu Sans Mono\" -size 8 -weight normal -slant roman -underline 0 -overstrike 0
+	tool = vimdiff
+	conflictstyle = diff3
 [color]
 	sh = auto
 	ui = auto
@@ -33,3 +34,7 @@
 [color "branch"]
 	local = yellow
 
+[push]
+	default = simple
+[mergetool]
+	prompt = false

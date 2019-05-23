@@ -28,10 +28,10 @@ set number
 	" direct .vimrc edit
 	nmap <Leader>v :e $MYVIMRC<CR>
 	" better tab navigation
-	map <C-t> :tabnew<CR> " nový tab
-	map <C-n> :tabnext<CR> " další tab
-	map <C-p> :tabprev<CR> " předchozí tab
-	map <C-w> :q<CR> " zavřít tab
+	map <C-t> :tabnew<CR>
+	map <C-n> :tabnext<CR>
+	map <C-p> :tabprev<CR>
+	map <C-w> :q<CR>
 	" Shift+C to clear highlighted search results
 	nnoremap <silent> <S-c> :nohlsearch<Bar>:echo<CR>
 	" line numbers display switch
@@ -72,7 +72,7 @@ set number
 	set foldenable " turn on folding
 	set foldmarker={,} " fold between { and }
 	set foldmethod=marker " fold on marker
-	set foldminlines=7 " fold only 7 lines or more
+	set foldminlines=15 " fold only 7 lines or more
 	set foldopen=block,hor,mark,percent,quickfix,tag " actions which open folds
 
 	" fold opening and closing

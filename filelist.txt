@@ -1,6 +1,6 @@
-.ssh/config
 .gitconfig
-.gitk
-.gitshrc
+.gitignore
+.oh-my-zsh/custom/powerlevel9k.sh
+.oh-my-zsh/custom/powerlevel10k.sh
 .vimrc
-
+.zshrc
