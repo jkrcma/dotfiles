@@ -1,9 +1,9 @@
 # Dot Files
 My personal config files tweaked by years of use and experience.
 
-## Installation
+## Installation
 
-```
+```bash
 git clone git@github.com:jkrcma/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
