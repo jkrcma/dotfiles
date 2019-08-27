@@ -1,18 +1,26 @@
 # Path to your oh-my-zsh installati
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-source ~/.fonts/devicons-regular.sh
-source ~/.fonts/fontawesome-regular.sh
-source ~/.fonts/octicons-regular.sh
-source ~/.fonts/pomicons-regular.sh
+source /usr/share/fonts/awesome-terminal-fonts/devicons-regular.sh
+source /usr/share/fonts/awesome-terminal-fonts/fontawesome-regular.sh
+source /usr/share/fonts/awesome-terminal-fonts/octicons-regular.sh
+source /usr/share/fonts/awesome-terminal-fonts/pomicons-regular.sh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-source ~/.oh-my-zsh/custom/powerlevel10k.sh
+if [ `tput colors` != "256" ]; then
+	ZSH_THEME="robbyrussell"
+else
+	ZSH_THEME="powerlevel10k/powerlevel10k"
+	source ~/.oh-my-zsh/custom/powerlevel10k.sh
+fi
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -47,7 +55,7 @@ source ~/.oh-my-zsh/custom/powerlevel10k.sh
 export HISTSIZE=500000
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
 # User configuration
 export PATH="/home/taiku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
@@ -56,6 +64,11 @@ export GREP_OPTIONS="--color=always"
 export GREP_COLOR="1;30;43"
 # export MANPATH="/usr/local/man:$MANPATH"
 #
+
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
 
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 
@@ -102,9 +115,10 @@ alias la='exa -lga'
 alias ip='ip -c'
 alias ssh-add='ssh-add -t 8h'
 alias sa='ssh-add'
-alias sap='ssh-add ~/Projekty/id_ed25519 ~/Projekty/id_rsa'
-alias sak='ssh-add ~/Projekty/id_ed25519-kraja'
-alias wiki='gollum -r `git rev-parse --abbrev-ref HEAD`'
+alias sak='ssh-add ~/.ssh/id_ed25519-kraja'
+
+alias sclip='xclip -selection c'
+alias gclip='xclip -selection c -o'
 
 function git_clean_branches {
 	git remote prune origin
@@ -117,21 +131,16 @@ function genpasswd {
 	LC_CTYPE="UTF-8"
 }
 
-function s {
-	mosh $1.dh.czech
-}
+alias s='mosh'
 compdef s=ssh
 
 function pip_update_docker {
-	docker run -ti --rm -v "$(pwd):/app" --entrypoint sh ${1:-"python:3-alpine"} -c "cd /app; pip install pip-tools; pip-compile --verbose --upgrade requirements.in"
+	docker run -ti --rm -v "$(pwd):/app" --entrypoint sh ${1:-"python:3-alpine"} -c "cd /app; pip install pip-tools; pip-compile --verbose --upgrade requirements.in; chmod 644 requirements.txt; chown $(id -u):$(id -g) requirements.txt"
 }
 function pypy3 {
 	docker run -ti --rm -v "$PWD":/usr/src/app -w /usr/src/app pypy:3-slim pypy3 $@
 }
 alias ydl_docker='docker run --rm -u $(id -u):$(id -g) -v $PWD:/data vimagick/youtube-dl'
-
-alias vpn_connect='qdbus-qt5 org.kde.kwalletd5 /modules/kwalletd5 readPassword "$( qdbus-qt5 org.kde.kwalletd5 /modules/kwalletd5 org.kde.KWallet.open kdewallet 0 "openconnect" )" "Passwords" "Heureka VPN" "openconnect" | \
-    sudo -p "[sudo] Password: " openconnect -q --user=jakub.krcma --authgroup=devel --passwd-on-stdin --non-inter vpn.hadmin.cz'
 
 unsetopt AUTO_REMOVE_SLASH
 unsetopt EXTENDED_GLOB

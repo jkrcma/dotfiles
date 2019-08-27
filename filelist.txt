@@ -5,16 +5,6 @@
 .vimrc
 .zshrc
 
-.config/fontconfig/conf.d/10-symbols.conf
-.fonts/devicons-regular.sh
-.fonts/fontawesome-regular.sh
-.fonts/octicons-regular.sh
-.fonts/pomicons-regular.sh
-.fonts/devicons-regular.ttf
-.fonts/fontawesome-regular.ttf
-.fonts/octicons-regular.ttf
-.fonts/pomicons-regular.ttf
-
 .oh-my-zsh/custom/plugins/zsh-autosuggestions/.git/config
 .oh-my-zsh/custom/plugins/zsh-syntax-highlighting/.git/config
 .oh-my-zsh/custom/themes/powerlevel9k/.git/config
