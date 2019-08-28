@@ -6,7 +6,8 @@ DIR="$( dirname "$0" )"
 cat $DIR/filelist.txt | while read file; do
 	original="$file"
 	# we support only files
-	[ ! -f "$SRC_DIR/$original" ] && continue
+	[ -z "$original" ] && continue
+	[ ! -f "$SRC_DIR/$original" ] && echo "$SRC_DIR/$original doesn't exist or is not a file" && continue
 
 	# normalize the filename (remove dot)
 	[ "${file:0:1}" == "." ] && file="${file:1}"

@@ -25,7 +25,7 @@
 .config/polybar/scripts/windows
 .config/polybar/wallpapers/bg-secondary.jpg
 .config/redshift/hooks/brightness.sh
-.config/redshift.conf
+.config/redshift/redshift.conf
 .config/rofi/orange.rasi
 .config/skippy-xd/skippy-xd.rc
 .config/termite/config
