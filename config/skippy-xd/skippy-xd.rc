@@ -1,0 +1,52 @@
+[general]
+distance = 55555eNetWMFullscreen = true
+ignoreSkipTaskbar = true
+updateFreq = 10.0
+lazyTrans = false
+pipePath = /tmp/skippy-xd-fifo
+movePointerOnStart = true
+movePointerOnSelect = true
+movePointerOnRaise = true
+switchDesktopOnActivate = false
+useNameWindowPixmap = false
+forceNameWindowPixmap = false
+includeFrame = true
+allowUpscale = true
+showAllDesktops = true
+showUnmapped = true
+preferredIconSize = 48
+clientDisplayModes = thumbnail icon filled none
+iconFillSpec = orig mid mid #101010
+fillSpec = orig mid mid #FFFFFF
+background =
+
+[xinerama]
+showAll = true
+
+[normal]
+tint = black
+tintOpacity = 0
+opacity = 200
+
+[highlight]
+tint = #101020
+tintOpacity = 64
+opacity = 255
+
+[tooltip]
+show = true
+followsMouse = true
+offsetX = 20
+offsetY = 20
+align = left
+border = #ffffff
+background = #404040
+opacity = 128
+text = #ffffff
+textShadow = black
+font = fixed-11:weight=bold
+
+[bindings]
+miwMouse1 = focus
+miwMouse2 = close-ewmh
+miwMouse3 = iconify
