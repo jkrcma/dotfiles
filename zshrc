@@ -59,7 +59,7 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
 # User configuration
 export PATH="/home/taiku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-export CDPATH=".:$HOME/Heureka:$HOME/Projekty"
+export CDPATH=".:$HOME/Work"
 export GREP_OPTIONS="--color=always"
 export GREP_COLOR="1;30;43"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -135,7 +135,8 @@ alias s='mosh'
 compdef s=ssh
 
 function pip_update_docker {
-	docker run -ti --rm -v "$(pwd):/app" --entrypoint sh ${1:-"python:3-alpine"} -c "cd /app; pip install pip-tools; pip-compile --verbose --upgrade requirements.in; chmod 644 requirements.txt; chown $(id -u):$(id -g) requirements.txt"
+	local filename=${1:+"${1}-"}requirements
+	docker run -ti --rm -v "$(pwd):/app" --entrypoint sh python:3 -c "cd /app; pip install pip-tools; pip-compile --verbose --upgrade $filename.in; chmod 644 $filename.txt; chown $(id -u):$(id -g) $filename.txt"
 }
 function pypy3 {
 	docker run -ti --rm -v "$PWD":/usr/src/app -w /usr/src/app pypy:3-slim pypy3 $@
