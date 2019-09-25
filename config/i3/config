@@ -45,8 +45,8 @@ exec --no-startup-id dex -a -e i3
 #exec_always --no-startup-id killall -q dunst && dunst
 
 # Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
@@ -82,10 +82,15 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+bindsym $mod+y focus left
+bindsym $mod+x focus down
+bindsym $mod+c focus up
+bindsym $mod+v focus right
+
 # move focused window
 bindsym $mod+Ctrl+Left move left
-bindsym $mod+Crtl+Down move down
-bindsym $mod+Crtl+Up move up
+bindsym $mod+Ctrl+Down move down
+bindsym $mod+Ctrl+Up move up
 bindsym $mod+Ctrl+Right move right
 
 # split in horizontal orientation
