@@ -6,6 +6,7 @@
 .vimrc
 .zshrc
 
+.config/bat/config
 .config/dunst/dunstrc
 .config/i3/config
 .config/i3/autostart.sh

@@ -105,12 +105,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+
 # hack to avoid shitty quoting of file names
 alias ls='ls -N --color=auto'
-alias l='exa -lga'
-alias lsa='exa -lga'
-alias ll='exa -lg'
-alias la='exa -lga'
+alias l='lsd -la'
+alias ll='lsd -lA'
+alias la='lsd -la'
+alias cat='bat'
 
 alias ip='ip -c'
 alias ssh-add='ssh-add -t 8h'
@@ -126,9 +128,8 @@ function git_clean_branches {
 }
 
 function genpasswd {
-	LC_CTYPE="C"
-	tr -dc A-Za-z0-9_ < /dev/urandom | head -c 20 | xargs
-	LC_CTYPE="UTF-8"
+	local algo=${1:-0}
+	apg -a$algo -MNCL -m16 -x16
 }
 
 alias s='mosh'
