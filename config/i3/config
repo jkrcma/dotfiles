@@ -7,7 +7,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
-font pango:Misc Termsyn 8
+font pango:Terminus 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -20,7 +20,7 @@ smart_gaps on
 gaps inner 10
 
 default_floating_border pixel 1
-for_window [class=".*"] title_format "<span size='large'>%title</span> <span foreground='#FFFFFF'>%class</span>"
+for_window [class=".*"] title_format "<span size='large'>%title</span> <span font_desc='Gohufont' foreground='#FFFFFF'>%class</span>"
 
 # Colors
 client.focused          #EE7313 #EE7313 #FFFFFF #EE7313 #000000

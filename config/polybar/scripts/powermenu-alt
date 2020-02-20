@@ -2,7 +2,7 @@
 
 ## Created By Aditya Shakya
 
-MENU="$(rofi -sep "|" -dmenu -i -p 'System' -width 12 -hide-scrollbar -line-padding 4 -padding 20 -lines 6 -font "Misc Termsyn 12" -theme orange <<< "	Lock|	Logout|	Suspend|	Hibernate|	Reboot|	Shutdown")"
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -width 12 -hide-scrollbar -line-padding 4 -padding 20 -lines 6 -font "Gohufont 8" -theme orange <<< "	Lock|	Logout|	Suspend|	Hibernate|	Reboot|	Shutdown")"
             case "$MENU" in
                 *Lock) i3lock-fancy ;;
                 *Logout) i3-nagbar -t warning "You are being logged out"; i3-msg exit ;;

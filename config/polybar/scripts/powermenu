@@ -2,8 +2,8 @@
 
 ## Created By Aditya Shakya
 
-MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -yoffset 32 -xoffset -10 -width 12 -line-padding 4 -padding 20 -lines 6 -font "Misc Termsyn 12" -theme orange <<< " Lock| Logout| Suspend| Hibernate| Reboot| Shutdown")"
-            case "$MENU" in
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -yoffset 32 -xoffset -10 -width 12 -line-padding 4 -padding 20 -lines 6 -font "Gohufont 8" -theme orange <<< " Lock| Logout| Suspend| Hibernate| Reboot| Shutdown")"
+            case "$MENU" i
                 *Lock) cinnamon-screensaver-command -l ;;
                 *Logout) cinnamon-screensaver-command -l -m "Logging you out..."; i3-msg exit ;;
 		*Suspend) cinnamon-screensaver-command -l -m "Putting system to sleep..."; systemctl suspend ;;
