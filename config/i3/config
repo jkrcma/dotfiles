@@ -27,6 +27,9 @@ client.focused          #EE7313 #EE7313 #FFFFFF #EE7313 #000000
 client.focused_inactive #112526 #112526 #AE9793 #EE7313 #000000
 client.unfocused        #112526 #112526 #AE9793 #EE7313 #000000
 
+mouse_warping none
+focus_on_window_activation urgent
+
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -75,6 +78,7 @@ bindsym $mod+Shift+w kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+space exec --no-startup-id "rofi -modi combi,calc -combi-modi drun,run,calc -show combi -theme orange -location 2 -yoffset 22 -columns 2 -width 40 -lines 10 -padding 25 -show-icons -icon-theme 'Flat-Remix-Yellow-Dark' -font 'Source Code Pro 9'"
+bindsym $mod+p exec --no-startup-id "bwmenu --auto-lock 300 -- -theme orange -location 2 -yoffset 22 -columns 2 -width 40 -lines 10 -padding 25 -font 'Source Code Pro 9'"
 
 # change focus
 bindsym $mod+Left focus left
@@ -178,7 +182,6 @@ bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
 bindsym $mod+l exec cinnamon-screensaver-command -l
-bindsym $mod+Shift+l exec i3lock-fancy -f Source-Code-Pro
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
