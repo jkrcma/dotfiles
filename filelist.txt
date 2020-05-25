@@ -8,8 +8,10 @@
 
 .config/bat/config
 .config/dunst/dunstrc
+.config/dunst/dmenu.sh
 .config/i3/config
 .config/i3/autostart.sh
+.config/i3/roficlip.sh
 .config/polybar/bars.ini
 .config/polybar/colors.ini
 .config/polybar/config-bottom.ini
@@ -29,6 +31,8 @@
 .config/redshift/redshift.conf
 .config/rofi/orange.rasi
 .config/skippy-xd/skippy-xd.rc
+.config/sxiv/exec/key-handler
+.config/systemd/user/clipster.service
 .config/termite/config
 
 .oh-my-zsh/custom/plugins/zsh-autosuggestions/.git/config

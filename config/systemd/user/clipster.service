@@ -1,0 +1,11 @@
+[Unit]
+Description=Clipster clipboard manager
+Documentation=https://github.com/mrichar1/clipster
+After=display-manager.service
+
+[Service]
+ExecStart=/usr/bin/clipster -d
+Restart=always
+
+[Install]
+WantedBy=default.target

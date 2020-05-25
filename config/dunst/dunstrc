@@ -180,7 +180,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = ~/.config/dunst/dmenu.sh
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/google-chrome-stable
@@ -213,7 +213,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 2
+    corner_radius = 4
 
     ### Legacy
 
@@ -267,7 +267,7 @@
     # On the US keyboard layout "grave" is normally above TAB and left
     # of "1". Make sure this key actually exists on your keyboard layout,
     # e.g. check output of 'xmodmap -pke'
-    history = ctrl+grave
+    history = ctrl+semicolon
 
     # Context menu.
     context = ctrl+shift+period
@@ -411,4 +411,8 @@
 #    appname = "some_volume_notifiers"
 #    set_stack_tag = "volume"
 #
+[bwmenu]
+    desktop_entry = bwmenu
+    markup = strip
+    urgency = critical
 # vim: ft=cfg
