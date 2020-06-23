@@ -22,3 +22,5 @@
 	gpgsign = true
 [includeIf "gitdir:~/Work/ProtonMail/"]
 	path = ~/Work/ProtonMail/.gitconfig
+[pull]
+	rebase = false
