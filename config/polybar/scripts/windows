@@ -2,4 +2,4 @@
 
 ## Created By Aditya Shakya
 
-rofi -modi window -show window -hide-scrollbar -font "Gohufont 8" -padding 20 -line-padding 4 -width 40 -lines 6 -theme orange
+rofi -modi window -show window -hide-scrollbar -font "Gohu GohuFont 8" -padding 20 -line-padding 4 -width 40 -lines 6 -theme orange

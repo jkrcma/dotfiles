@@ -20,7 +20,7 @@ smart_gaps on
 gaps inner 10
 
 default_floating_border pixel 1
-for_window [class=".*"] title_format "<span size='large'>%title</span> <span font_desc='Gohufont' foreground='#FFFFFF'>%class</span>"
+for_window [class=".*"] title_format "<span size='large'>%title</span> <span font_desc='Gohu GohuFont' foreground='#FFFFFF'>%class</span>"
 
 # Colors
 client.focused          #EE7313 #EE7313 #FFFFFF #EE7313 #000000
