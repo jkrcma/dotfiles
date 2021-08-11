@@ -80,6 +80,8 @@ bindsym $mod+Shift+w kill
 bindsym $mod+space exec --no-startup-id "rofi -modi combi,calc -combi-modi drun,run,calc -show combi -theme orange -location 2 -yoffset 22 -columns 2 -width 40 -lines 10 -padding 25 -show-icons -icon-theme 'Flat-Remix-Yellow-Dark' -font 'Source Code Pro 9'"
 bindsym $mod+p exec --no-startup-id "bwmenu --auto-lock 300 -- -theme orange -location 2 -yoffset 22 -columns 2 -width 40 -lines 10 -padding 25 -font 'Source Code Pro 9'"
 bindsym $mod+Shift+v exec --no-startup-id $HOME/.config/i3/roficlip.sh
+# copied from polybar config
+bindsym $mod+Shift+n exec --no-startup-id "networkmanager_dmenu -fn 'Gohu GohuFont:size=8' -nb '#112526' -nf '#ae9793' -sb '#ee7313'"
 
 # change focus
 bindsym $mod+Left focus left

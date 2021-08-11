@@ -24,3 +24,5 @@
 	path = ~/Work/ProtonMail/.gitconfig
 [pull]
 	rebase = false
+[init]
+	defaultBranch = master

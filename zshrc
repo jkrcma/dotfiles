@@ -120,6 +120,11 @@ alias ssh-add='ssh-add -t 8h'
 alias sa='ssh-add'
 alias sak='ssh-add ~/.ssh/id_ed25519-kraja'
 
+function ssh {
+	[ "$TERM" = "alacritty" ] && TERM=xterm-256color
+	/usr/bin/ssh "$@"
+}
+
 alias sclip='xclip -selection c'
 alias gclip='xclip -selection c -o'
 
@@ -139,6 +144,10 @@ compdef s=ssh
 function pip_update_docker {
 	local filename=${1:+"${1}-"}requirements
 	docker run -ti --rm -v "$(pwd):/app" --entrypoint sh python:3 -c "cd /app; pip install pip-tools; pip-compile --verbose --upgrade $filename.in; chmod 644 $filename.txt; chown $(id -u):$(id -g) $filename.txt"
+}
+function pip_update_docker_hashes {
+	local filename=${1:+"${1}-"}requirements
+	docker run -ti --rm -v "$(pwd):/app" --entrypoint sh python:3 -c "cd /app; pip install pip-tools; pip-compile --verbose --generate-hashes $filename.in; chmod 644 $filename.txt; chown $(id -u):$(id -g) $filename.txt"
 }
 function pypy3 {
 	docker run -ti --rm -v "$PWD":/usr/src/app -w /usr/src/app pypy:3-slim pypy3 $@

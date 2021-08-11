@@ -32,7 +32,8 @@ while true; do
         else
             echo $BAR_ICON
         fi
-        sleep 10
+        # edited: this is Arch Linux, there are updates all the time
+        sleep 1800
         get_total_updates
     done
 
