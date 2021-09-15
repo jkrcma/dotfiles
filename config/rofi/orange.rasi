@@ -58,6 +58,11 @@ element {
    padding: 2px 15px;
 }
 
+element-text, element-icon {
+   background-color: inherit;
+   text-color: inherit;
+}
+
 element normal.normal {
    padding: 0px 15px;
    background-color: @blackentry;

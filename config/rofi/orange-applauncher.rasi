@@ -1,0 +1,26 @@
+@theme "orange.rasi"
+
+window {
+   width: 40%;
+   y-offset: 22px;
+   font: "Source Code Pro 9";
+}
+
+mode-switcher {
+   padding: 4px 9px;
+}
+
+listview {
+   padding: 0 1em;
+   columns: 2;
+   lines: 10;
+   scrollbar: false;
+}
+
+element {
+   padding: 2px 4px;
+}
+
+element-icon {
+   margin-right: 20px;
+}

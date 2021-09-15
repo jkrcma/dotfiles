@@ -25,7 +25,7 @@ C_HIST="$(clipster -c -o -n 500 -0 \
 if [[ -t 0 ]]; then
   SELECTION="$(echo "$C_HIST" | fzf-tmux -d 15 --prompt='selection: ')"
 else
-  SELECTION="$(echo "$C_HIST" | rofi -dmenu -i -p 'selection: ' -theme orange -location 2 -yoffset 22 -columns 2 -width 40 -lines 10 -padding 25 -font 'Source Code Pro 9')"
+  SELECTION="$(echo "$C_HIST" | rofi -dmenu -i -p 'selection: ' -theme orange-applauncher -location 2 -font 'Source Code Pro 9')"
 fi
 
 # Verify user made a selection
