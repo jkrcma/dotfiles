@@ -61,7 +61,7 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 GREP_OPTIONS="--color=always"
 export PATH="/home/taiku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export CDPATH=".:$HOME/Work"
-export GREP_COLOR="1;30;43"
+export GREP_COLOR="mt=1;30;43"
 [[ -z "$DISPLAY" ]] && TMOUT=600
 # export MANPATH="/usr/local/man:$MANPATH"
 #
