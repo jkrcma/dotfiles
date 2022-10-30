@@ -4,6 +4,7 @@
 .oh-my-zsh/custom/powerlevel10k.sh
 .pam_environment
 .vimrc
+.xinitrc
 .zshrc
 
 .config/bat/config
