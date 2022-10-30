@@ -1,0 +1,58 @@
+// vim:ts=4:sw=4:et
+{
+    // tabbed split container with 3 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "tabbed",
+    "marks": [],
+    "percent": null,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "marks": [],
+            "name": "Slack",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+                  "class": "^Slack$",
+                  "instance": "^slack$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "marks": [],
+            "name": "Google Chrome - Proton",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+                  "class": "^Proton$",
+                  "instance": "^google\\-chrome"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "marks": [],
+            "name": "Google Chrome - Proton",
+            "percent": 0.333333333333333,
+            "swallows": [
+               {
+                  "class": "^Proton$",
+                  "instance": "^google\\-chrome"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

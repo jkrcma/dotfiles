@@ -13,6 +13,16 @@
 .config/i3/config
 .config/i3/autostart.sh
 .config/i3/roficlip.sh
+.config/i3/layouts/w1.json
+.config/i3/layouts/w2.json
+.config/i3/layouts/w3.json
+.config/i3/layouts/w4.json
+.config/i3/layouts/w5.json
+.config/i3/layouts/w6.json
+.config/i3/layouts/w7.json
+.config/i3/layouts/w8.json
+.config/i3/layouts/w9.json
+.config/i3/layouts/w10.json
 .config/polybar/bars.ini
 .config/polybar/colors.ini
 .config/polybar/config-bottom.ini

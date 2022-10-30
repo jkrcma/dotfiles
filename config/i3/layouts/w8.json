@@ -1,0 +1,17 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "marks": [],
+    "name": "Bitwarden",
+    "percent": 1,
+    "swallows": [
+       {
+          "class": "^Bitwarden$",
+          "instance": "^bitwarden$"
+       }
+    ],
+    "type": "con"
+}
+
