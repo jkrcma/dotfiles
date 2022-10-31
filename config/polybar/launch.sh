@@ -6,7 +6,15 @@
 killall -q polybar
 
 # Wait until the processes have been shut down
-while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+retries=0
+while pgrep -u $UID -x polybar >/dev/null; do
+	if [ $retries -ge 3 ]; then
+		# Polybar loves to get stuck :]
+		killall -q -9 polybar
+	fi
+	sleep 1
+	let "retries++"
+done
 
 # Launch bar1 and bar2
 #if type "xrandr"; then
