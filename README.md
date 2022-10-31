@@ -17,5 +17,5 @@ After making your own changes, simply run `update.sh` to add files to your repos
 
 ## Links
 
-* [Polybar themes](https://github.com/adi1090x/polybar-themes/tree/master/polybar-3) - my configs are based on this theme
+* [Polybar themes](https://github.com/jkrcma/polybar-themes/tree/master/polybar-3) - my configs are based on this theme
 
