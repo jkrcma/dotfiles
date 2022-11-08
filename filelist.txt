@@ -2,9 +2,9 @@
 .gitignore
 .oh-my-zsh/custom/powerlevel9k.sh
 .oh-my-zsh/custom/powerlevel10k.sh
-.pam_environment
 .vimrc
 .xinitrc
+.zshenv
 .zshrc
 
 .config/bat/config
