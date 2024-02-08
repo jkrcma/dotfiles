@@ -22,21 +22,6 @@
                }
             ],
             "type": "con"
-        },
-        {
-            "border": "pixel",
-            "current_border_width": 0,
-            "floating": "auto_off",
-            "marks": [],
-            "name": "Discord",
-            "percent": 0.5,
-            "swallows": [
-               {
-                  "class": "^discord$",
-                  "instance": "^discord$"
-               }
-            ],
-            "type": "con"
         }
     ]
 }

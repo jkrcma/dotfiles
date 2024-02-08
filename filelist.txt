@@ -17,9 +17,9 @@
 .config/i3/layouts/w2.json
 .config/i3/layouts/w3.json
 .config/i3/layouts/w4.json
-.config/i3/layouts/w5.json
+#.config/i3/layouts/w5.json
 .config/i3/layouts/w6.json
-.config/i3/layouts/w7.json
+#.config/i3/layouts/w7.json
 .config/i3/layouts/w8.json
 .config/i3/layouts/w10.json
 .config/polybar/bars.ini
