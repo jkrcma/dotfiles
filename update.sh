@@ -7,6 +7,7 @@ cat $DIR/filelist.txt | while read file; do
 	original="$file"
 	# we support only files
 	[ -z "$original" ] && continue
+	[[ "$original" == \#* ]] && continue
 	[ ! -f "$SRC_DIR/$original" ] && echo "$SRC_DIR/$original doesn't exist or is not a file" && continue
 
 	# normalize the filename (remove dot)

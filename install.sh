@@ -6,8 +6,9 @@ DIR="$( dirname "$0" )"
 exec 5<"$DIR"/filelist.txt
 while read -u5 file; do
 	original="$file"
-	# skip empty lines
+	# skip empty lines and comments
 	[ -z "$original" ] && continue
+	[[ "$original" == \#* ]] && continue
 	
 	# normalize the filename (remove dot)
 	[ "${file:0:1}" == "." ] && file="${file:1}"
