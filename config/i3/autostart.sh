@@ -23,7 +23,8 @@ i3-msg "exec dex $r_shared/google-chrome.desktop"
 sleep 5
 i3-msg "exec dex $r_shared/bitwarden.desktop"
 sleep 2
-i3-msg "exec dex $r_shared/telegramdesktop.desktop; exec dex $r_shared/discord.desktop"
+#i3-msg "exec dex $r_shared/telegramdesktop.desktop; exec dex $r_shared/discord.desktop"
+i3-msg "exec dex $r_shared/telegramdesktop.desktop"
 sleep 5
 
 i3-msg "workspace 1"
