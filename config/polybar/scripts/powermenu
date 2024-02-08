@@ -2,12 +2,43 @@
 
 ## Created By Aditya Shakya
 
+function wait_for_exit {
+	i3-msg '[class="."] kill' # Graceful shutdown
+	n_try=1
+	while [ $n_try -lt 10 ]; do
+		win_count=$( i3-msg -t get_tree | jq '.. | select(.type? == "con" and has("window_properties")) | .window_properties | select(has("class") and .class != "Polybar") | .class' | wc -l )
+		if [ $win_count -le 0 ]; then
+			return 0
+		fi
+		n_try=$(( n_try + 1 ))
+		sleep 1
+	done
+
+	return 1
+}
+
 MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -xoffset -10 -lines 6 -theme orange-applauncher -theme-str 'window { width: 12%; }' -theme-str 'window { font: "Gohu GohuFont 8"; }' <<< " Lock| Logout| Suspend| Hibernate| Reboot| Shutdown")"
             case "$MENU" in
-                *Lock) cinnamon-screensaver-command -l ;;
-                *Logout) cinnamon-screensaver-command -l -m "Logging you out..."; i3-msg exit ;;
-		*Suspend) cinnamon-screensaver-command -l -m "Putting system to sleep..."; systemctl suspend ;;
-		*Hibernate) cinnamon-screensaver-command -l -m "Putting system to deep sleep..."; systemctl hibernate ;;
-                *Reboot) cinnamon-screensaver-command -l -m "Rebooting..."; systemctl reboot ;;
-                *Shutdown) cinnamon-screensaver-command -l -m "Shutting down..."; systemctl -i poweroff
+                *Lock)
+			cinnamon-screensaver-command -l
+			;;
+                *Logout)
+			cinnamon-screensaver-command -l -m "Logging you out..."
+			i3-msg exit
+			;;
+		*Suspend)
+			cinnamon-screensaver-command -l -m "Putting system to sleep..."
+			systemctl suspend
+			;;
+		*Hibernate)
+			cinnamon-screensaver-command -l -m "Putting system to deep sleep..."
+			systemctl hibernate
+			;;
+                *Reboot)
+			cinnamon-screensaver-command -l -m "Rebooting..."
+			wait_for_exit && systemctl reboot
+			;;
+                *Shutdown)
+			cinnamon-screensaver-command -l -m "Shutting down..."
+			wait_for_exit && systemctl -i poweroff
             esac
