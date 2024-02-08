@@ -18,7 +18,8 @@ i3-msg "exec dex $r_shared/visual-studio-code.desktop"
 sleep 5
 i3-msg "exec dex $r_shared/obsidian.desktop"
 sleep 2
-i3-msg "exec dex $r_shared/google-chrome.desktop; exec dex $r_local/google-chrome-orchideio.desktop"
+#i3-msg "exec dex $r_shared/google-chrome.desktop; exec dex $r_local/google-chrome-orchideio.desktop"
+i3-msg "exec dex $r_shared/google-chrome.desktop"
 sleep 5
 i3-msg "exec dex $r_shared/bitwarden.desktop"
 sleep 2
