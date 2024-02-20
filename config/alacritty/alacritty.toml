@@ -1,0 +1,29 @@
+[colors.normal]
+black = "#272822"
+blue = "#66d9ef"
+cyan = "#a1efe4"
+green = "#a6e22e"
+magenta = "#ae81ff"
+red = "#f92672"
+white = "#f9f8f5"
+yellow = "#f4bf75"
+
+[colors.primary]
+background = "#101010"
+foreground = "#f8f8f2"
+
+[cursor]
+blink_interval = 600
+
+[cursor.style]
+blinking = "On"
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Source Code Pro"
+
+[window]
+dynamic_title = true
+#history = 100000

@@ -44,7 +44,7 @@
 .config/skippy-xd/skippy-xd.rc
 .config/sxiv/exec/key-handler
 .config/systemd/user/clipster.service
-.config/alacritty/alacritty.yml
+.config/alacritty/alacritty.toml
 
 .oh-my-zsh/custom/plugins/zsh-autosuggestions/.git/config
 .oh-my-zsh/custom/plugins/zsh-syntax-highlighting/.git/config
