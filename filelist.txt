@@ -1,6 +1,5 @@
 .gitconfig
 .gitignore
-.oh-my-zsh/custom/powerlevel9k.sh
 .oh-my-zsh/custom/powerlevel10k.sh
 .vimrc
 .xinitrc
@@ -48,5 +47,4 @@
 
 .oh-my-zsh/custom/plugins/zsh-autosuggestions/.git/config
 .oh-my-zsh/custom/plugins/zsh-syntax-highlighting/.git/config
-.oh-my-zsh/custom/themes/powerlevel9k/.git/config
 .oh-my-zsh/custom/themes/powerlevel10k/.git/config
