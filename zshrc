@@ -15,6 +15,7 @@ if [ `tput colors` != "256" ]; then
 	ZSH_THEME="robbyrussell"
 else
 	ZSH_THEME="powerlevel10k/powerlevel10k"
+	[ ! -f ~/.p10k.zsh ] || source ~/.p10k.zsh
 	source ~/.oh-my-zsh/custom/powerlevel10k.sh
 fi
 

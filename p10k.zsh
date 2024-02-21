@@ -1,0 +1,3 @@
+typeset -g POWERLEVEL9K_VCS_GIT_REMOTE_ICONS=(
+  '*gitlab*' VCS_GIT_GITLAB_ICON
+)

@@ -1,6 +1,7 @@
 .gitconfig
 .gitignore
 .oh-my-zsh/custom/powerlevel10k.sh
+.p10k.zsh
 .vimrc
 .xinitrc
 .zshenv
