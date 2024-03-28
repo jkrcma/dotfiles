@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source $( dirname "$0" )/../vars.sh
+
+i3-msg -s $i3sock '[workspace="^\d+$"] move workspace to output '$primary';'

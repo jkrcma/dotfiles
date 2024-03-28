@@ -3,7 +3,7 @@
 window {
    width: 40%;
    y-offset: 22px;
-   font: "Source Code Pro 9";
+   font: "Source Code Pro 12";
 }
 
 mode-switcher {

@@ -7,6 +7,12 @@
 .zshenv
 .zshrc
 
+.config/autorandr/default/config
+.config/autorandr/default/postswitch
+.config/autorandr/default/setup
+.config/autorandr/dual/config
+.config/autorandr/dual/postswitch
+.config/autorandr/dual/setup
 .config/bat/config
 .config/dunst/dunstrc
 .config/dunst/dmenu.sh

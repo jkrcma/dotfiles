@@ -17,14 +17,14 @@ function wait_for_exit {
 	return 1
 }
 
-MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -xoffset -10 -lines 6 -theme orange-applauncher -theme-str 'window { width: 12%; }' -theme-str 'window { font: "Gohu GohuFont 8"; }' <<< " Lock| Logout| Suspend| Hibernate| Reboot| Shutdown")"
+MENU="$(rofi -sep "|" -dmenu -i -p 'System' -location 3 -xoffset -10 -lines 6 -theme orange-applauncher -theme-str 'window { width: 12%; }' -theme-str 'window { font: "Gohu GohuFont 12"; }' <<< " Lock| Logout| Suspend| Hibernate| Reboot| Shutdown")"
             case "$MENU" in
                 *Lock)
 			cinnamon-screensaver-command -l
 			;;
                 *Logout)
 			cinnamon-screensaver-command -l -m "Logging you out..."
-			i3-msg exit
+			wait_for_exit && i3-msg exit
 			;;
 		*Suspend)
 			cinnamon-screensaver-command -l -m "Putting system to sleep..."

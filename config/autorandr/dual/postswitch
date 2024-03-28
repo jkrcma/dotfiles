@@ -1,0 +1,17 @@
+#!/bin/bash
+
+source $( dirname "$0" )/../vars.sh
+
+tries=0
+while true; do
+    secondary="$( DISPLAY=$DSP xrandr -q | grep " connected " | grep -v "$primary " | cut -d' ' -f1 )"
+    [ -n "$secondary" -o $tries -eq 10 ] && break
+
+    tries=$((tries+1))
+    sleep 0.5
+done
+
+[ -z "$secondary" ] && exit 0
+
+i3-msg -s $i3sock '[workspace="^(1|2|3|4|5)$"] move workspace to output '$secondary';'
+i3-msg -s $i3sock '[workspace="^(6|7|8|9|10)$"] move workspace to output '$primary';'
