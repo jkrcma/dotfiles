@@ -60,7 +60,7 @@ ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
 # User configuration
 GREP_OPTIONS="--color=always"
-export PATH="/home/taiku/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export PATH="/home/taiku/bin:/home/taiku/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export CDPATH=".:$HOME/Work"
 export GREP_COLOR="mt=1;30;43"
 [[ -z "$DISPLAY" ]] && TMOUT=600
@@ -73,6 +73,15 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 ZSH_AUTOSUGGEST_USE_ASYNC=true
+
+# Hack for python-requests
+export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-bundle.crt
+
+# Namespaced kubeconfig
+export KUBECONFIG=$HOME/.kube/config
+for config in $HOME/.kube/conf.d/*; do
+  export KUBECONFIG="$KUBECONFIG:$config"
+done
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -120,6 +129,7 @@ alias ip='ip -c'
 alias ssh-add='ssh-add -t 8h'
 alias sa='ssh-add'
 alias sak='ssh-add ~/.ssh/id_ed25519-kraja'
+alias sap='ssh-add ~/.ssh/id_ed25519-proton'
 
 function ssh {
 	[ "$TERM" = "alacritty" ] && TERM=xterm-256color
@@ -155,7 +165,7 @@ function pip_update_docker_hashes {
 	docker run -ti --rm -v "$(pwd):/app" --entrypoint sh python:3 -c "cd /app; pip install pip-tools; pip-compile --verbose --generate-hashes $filename.in; chmod 644 $filename.txt; chown $(id -u):$(id -g) $filename.txt"
 }
 function poetry_docker {
-	docker run -ti --rm -v "$(pwd):/app" --entrypoint sh python:3-alpine -c "cd /app; pip install poetry; poetry $@"
+	docker run -ti --rm -v "$(pwd):/app" --entrypoint sh python:3-alpine -lc "cd /app; pip install poetry; poetry $@"
 }
 function pypy3 {
 	docker run -ti --rm -v "$PWD":/usr/src/app -w /usr/src/app pypy:3-slim pypy3 $@

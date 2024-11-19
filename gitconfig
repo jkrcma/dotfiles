@@ -1,11 +1,12 @@
 [user]
 	name = Jakub Krcma
 	email = jkrcma@gmail.com
-	signingkey = A648E7A018179551
+	signingkey = 048D40C574FFBF8E
 [core]
 	excludesfile = ~/.gitignore
 	editor = vim
 	autocrlf = input
+	pager = delta
 [alias]
 	out = !GIT_PAGER= git log --pretty=oneline --abbrev-commit --graph @{u}..
 	in = !git fetch && GIT_PAGER= git log --pretty=oneline --abbrev-commit --graph ..@{u}
@@ -13,7 +14,7 @@
 [merge]
 	summary = true
 	tool = vimdiff
-	conflictstyle = diff3
+	conflictStyle = zdiff3
 [push]
 	default = simple
 [mergetool]
@@ -26,3 +27,7 @@
 	rebase = false
 [init]
 	defaultBranch = master
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true

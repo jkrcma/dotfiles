@@ -14,7 +14,7 @@ output DisplayPort-1
 crtc 1
 gamma 1.0:1.031:1.075
 mode 2560x1440
-pos 0x0
+pos 2880x0
 rate 59.95
 x-prop-colorspace Default
 x-prop-max_bpc 16
@@ -28,9 +28,9 @@ output eDP
 crtc 0
 gamma 1.0:1.031:1.075
 mode 2880x1800
-pos 2560x850
+pos 0x850
 primary
-rate 90.00
+rate 60.00
 x-prop-colorspace Default
 x-prop-max_bpc 16
 x-prop-non_desktop 0
