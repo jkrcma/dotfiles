@@ -3,6 +3,8 @@
 	filemode = true
 	bare = false
 	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
 [remote "origin"]
 	url = https://github.com/zsh-users/zsh-autosuggestions
 	fetch = +refs/heads/*:refs/remotes/origin/*

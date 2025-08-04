@@ -1,15 +1,24 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Path to your oh-my-zsh installati
-export ZSH=/usr/share/oh-my-zsh
+#export ZSH=/usr/share/oh-my-zsh
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
-source /usr/share/fonts/awesome-terminal-fonts/devicons-regular.sh
-source /usr/share/fonts/awesome-terminal-fonts/fontawesome-regular.sh
-source /usr/share/fonts/awesome-terminal-fonts/octicons-regular.sh
-source /usr/share/fonts/awesome-terminal-fonts/pomicons-regular.sh
+#source /usr/share/fonts/awesome-terminal-fonts/devicons-regular.sh
+#source /usr/share/fonts/awesome-terminal-fonts/fontawesome-regular.sh
+#source /usr/share/fonts/awesome-terminal-fonts/octicons-regular.sh
+#source /usr/share/fonts/awesome-terminal-fonts/pomicons-regular.sh
 
 if [ `tput colors` != "256" ]; then
 	ZSH_THEME="robbyrussell"
@@ -56,14 +65,15 @@ fi
 export HISTSIZE=500000
 
 # Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+#ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
 # User configuration
 export EDITOR=vim
-export PATH="/home/taiku/bin:${KREW_ROOT:-$HOME/.krew}/bin:/home/taiku/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+GREP_OPTIONS="--color=always"
+#export PATH="/home/taiku/bin:/home/taiku/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export CDPATH=".:$HOME/Work"
-export GREP_COLOR="mt=1;30;43"
-[[ -z "$DISPLAY" ]] && TMOUT=600
+export GREP_COLORS="mt=1;30;43"
+#[[ -z "$DISPLAY" ]] && TMOUT=600
 # export MANPATH="/usr/local/man:$MANPATH"
 #
 
@@ -87,7 +97,7 @@ done
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python zsh-syntax-highlighting gpg-agent mosh httpie kubectl zsh-autosuggestions)
+plugins=(git python zsh-syntax-highlighting ssh-agent mosh httpie kubectl zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -116,10 +126,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+#[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+[[ -s "/opt/homebrew/etc/grc.zsh" ]] && source /opt/homebrew/etc/grc.zsh
 
 # hack to avoid shitty quoting of file names
-alias ls='ls -N --color=auto'
+alias ls='ls --color=auto'
 alias l='lsd -la'
 alias ll='lsd -lA'
 alias la='lsd -la'
@@ -154,7 +165,7 @@ function chrome_pids {
 }
 
 alias s='mosh'
-compdef s=ssh
+#compdef s=ssh
 
 function pip_update_docker {
 	local filename=${1:+"${1}-"}requirements
@@ -174,4 +185,3 @@ alias ydl_docker='docker run --rm -u $(id -u):$(id -g) -v $PWD:/data vimagick/yo
 
 unsetopt AUTO_REMOVE_SLASH
 unsetopt EXTENDED_GLOB
-

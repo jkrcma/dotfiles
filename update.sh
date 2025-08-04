@@ -14,7 +14,7 @@ cat $DIR/filelist.txt | while read file; do
 	[ "${file:0:1}" == "." ] && file="${file:1}"
 
 	# since paths with .git cannot be added to git we have to rename the file
-	file="${file/.git\/config/\!gitconfig}"
+	file="${file/.git\/config/!gitconfig}"
 
 	# create parent directories if any
 	mkdir -p "$( dirname "$DIR/$file" )" 2>/dev/null
