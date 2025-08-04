@@ -51,10 +51,10 @@ exec --no-startup-id dex -a -e i3
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id $HOME/.config/i3/mictoggle.sh
 
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 20+
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 20-
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 10%+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
 
 bindsym --release Print exec gnome-screenshot -i
 bindsym --release Ctrl+Print exec --no-startup-id gnome-screenshot -c

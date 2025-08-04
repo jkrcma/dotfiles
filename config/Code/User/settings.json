@@ -1,0 +1,146 @@
+{
+    //"editor.fontFamily": "'Source Code Pro Semibold'",
+    //"editor.fontFamily": "'Fira Code'",
+    //"editor.fontFamily": "'JetBrains Mono Medium'",
+    "editor.fontFamily": "'Cascadia Code SemiBold'",
+    //"editor.fontFamily": "'Hasklig Semibold'",
+    //"editor.fontLigatures": true,
+    "editor.fontLigatures": "'ss20', 'zero'",
+    "material-icon-theme.folders.color": "#ff7043",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "gitlens.views.repositories.location": "scm",
+    "gitlens.views.fileHistory.location": "scm",
+    "gitlens.views.lineHistory.location": "scm",
+    "gitlens.views.compare.location": "scm",
+    "gitlens.views.search.location": "scm",
+    "python.jediEnabled": false,
+    "editor.fontWeight": "500",
+    "projects.configPath": "~/Work/vscode_projects.json",
+    "terminal.integrated.fontFamily": "'Source Code Pro', 'FontAwesome'",
+    "terminal.integrated.setLocaleVariables": false,
+    "telemetry.telemetryLevel": "off",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Adapted-Dark-Monokai",
+    "files.insertFinalNewline": true,
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "files.associations": {
+        "*.html": "jinja-html",
+        "*.epp": "erb"
+    },
+    "docker.explorerRefreshInterval": 5000,
+    "search.useGlobalIgnoreFiles": true,
+    "editor.rulers": [
+        120,
+    ],
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py",
+        "migrations/**/*.py"
+    ],
+    "debug.toolBarLocation": "docked",
+    "highlight.regexes": {
+        "((?:<!-- *)?(?:#|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|\\{!|\\{\\{!--|\\{\\{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|\\{!|\\{\\{!--|\\{\\{!))|(?: +[^@\\n]+)?))": [
+            {
+                "overviewRulerColor": "#ffcc00",
+                "backgroundColor": "#ffcc00",
+                "color": "#1f1f1f",
+                "fontWeight": "bold"
+            },
+            {
+                "backgroundColor": "#d9ad00",
+                "color": "#1f1f1f"
+            }
+        ],
+        "((?:<!-- *)?(?:#|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *FIXME(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|\\{!|\\{\\{!--|\\{\\{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|\\{!|\\{\\{!--|\\{\\{!))|(?: +[^@\\n]+)?))": [
+            {
+                "overviewRulerColor": "#ff0000",
+                "backgroundColor": "#ff0000",
+                "color": "#1f1f1f",
+                "fontWeight": "bold"
+            },
+            {
+                "backgroundColor": "#d90000",
+                "color": "#1f1f1f"
+            }
+        ],
+        "(// )(@\\w+)": [
+            {},
+            {
+                "color": "#4de0ff"
+            }
+        ]
+    },
+    "explorer.confirmDelete": false,
+    "explorer.autoReveal": false,
+    "files.autoSave": "afterDelay",
+    "puppet.editorService.puppet.modulePath": "/home/taiku/Work/ProtonMail/puppet-lib/modules,/home/taiku/Work/ProtonMail/puppet-coreape/modules,/home/taiku/Work/ProtonMail/puppet-coreape/site",
+    "puppet.pdk.checkVersion": false,
+    "puppet.titleBar.pdkNewModule.enable": false,
+    "puppet.editorService.featureFlags": [
+
+    ],
+    "puppet.editorService.hover.showMetadataInfo": false,
+    "python.languageServer": "Pylance",
+    "files.autoSaveDelay": 10000,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "files.trimTrailingWhitespace": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "redhat.telemetry.enabled": false,
+    "terminal.integrated.profiles.linux": {
+
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        }
+    },
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "[markdown]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "editor.wordWrapColumn": 120,
+        "rewrap.autoWrap.enabled": true
+    },
+    "python.formatting.autopep8Args": [
+        "--max-line-length 120"
+    ],
+    "git.ignoreLegacyWarning": true,
+    "gitlens.advanced.messages": {
+        "suppressGitVersionWarning": true,
+        "suppressLineUncommittedWarning": true
+    },
+    "python.terminal.shellIntegration.enabled": true,
+    "testing.coverageToolbarEnabled": true,
+    "rubyLsp.rubyVersionManager": {
+        "identifier": "custom"
+    },
+    "rubyLsp.customRubyCommand": "export PATH=\"/home/taiku/.gem/ruby/3.3.0/bin/:$PATH\"",
+    "gitlab.duoChat.enabled": false,
+    "gitlab.duoCodeSuggestions.enabled": false,
+    "window.zoomLevel": 0,
+    "window.titleBarStyle": "custom",
+    "chat.commandCenter.enabled": false,
+    "workbench.activityBar.location": "top",
+    "terraform.codelens.referenceCount": true,
+    "terraform.experimentalFeatures.validateOnSave": true
+}

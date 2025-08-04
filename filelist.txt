@@ -7,6 +7,7 @@
 .zshenv
 .zshrc
 
+.config/alacritty/alacritty.toml
 .config/autorandr/default/config
 .config/autorandr/default/postswitch
 .config/autorandr/default/setup
@@ -16,8 +17,10 @@
 .config/bat/config
 .config/dunst/dunstrc
 .config/dunst/dmenu.sh
+.config/Code/User/settings.json
 .config/i3/config
 .config/i3/autostart.sh
+.config/i3/mictoggle.sh
 .config/i3/roficlip.sh
 .config/i3/layouts/w1.json
 .config/i3/layouts/w2.json
@@ -28,6 +31,8 @@
 #.config/i3/layouts/w7.json
 .config/i3/layouts/w8.json
 .config/i3/layouts/w10.json
+.config/k9s/plugins.yaml
+.config/lazygit/config.yml
 .config/polybar/bars.ini
 .config/polybar/colors.ini
 .config/polybar/config-bottom.ini
@@ -49,8 +54,9 @@
 .config/rofi/orange-applauncher.rasi
 .config/sxiv/exec/key-handler
 .config/systemd/user/clipster.service
-.config/alacritty/alacritty.toml
 
 .oh-my-zsh/custom/plugins/zsh-autosuggestions/.git/config
 .oh-my-zsh/custom/plugins/zsh-syntax-highlighting/.git/config
 .oh-my-zsh/custom/themes/powerlevel10k/.git/config
+
+.ssh/config
