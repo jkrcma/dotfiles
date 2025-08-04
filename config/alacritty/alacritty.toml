@@ -1,28 +1,38 @@
-[colors.normal]
-black = "#272822"
-blue = "#66d9ef"
-cyan = "#a1efe4"
-green = "#a6e22e"
-magenta = "#ae81ff"
-red = "#f92672"
-white = "#f9f8f5"
-yellow = "#f4bf75"
+[general]
+import = [
+  "/usr/share/alacritty/themes/monokai_pro.toml"
+#  "/usr/share/alacritty/themes/tender.toml"
+]
+
+#[colors.normal]
+#black = "#272822"
+#blue = "#66d9ef"
+#cyan = "#a1efe4"
+#green = "#a6e22e"
+#magenta = "#ae81ff"
+#red = "#f92672"
+#white = "#f9f8f5"
+#yellow = "#f4bf75"
 
 [colors.primary]
 background = "#101010"
-foreground = "#f8f8f2"
+#foreground = "#f8f8f2"
 
 [cursor]
 blink_interval = 600
 
 [cursor.style]
-blinking = "On"
+blinking = "Always"
 
 [font]
 size = 10.0
 
 [font.normal]
-family = "Source Code Pro"
+#family = "Sauce Code Pro Nerd Font Mono"
+family = "Meslo LGS NF"
+
+[mouse]
+hide_when_typing = true
 
 [window]
 dynamic_title = true

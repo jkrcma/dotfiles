@@ -59,8 +59,8 @@ export HISTSIZE=500000
 ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
 # User configuration
-GREP_OPTIONS="--color=always"
-export PATH="/home/taiku/bin:/home/taiku/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+export EDITOR=vim
+export PATH="/home/taiku/bin:${KREW_ROOT:-$HOME/.krew}/bin:/home/taiku/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 export CDPATH=".:$HOME/Work"
 export GREP_COLOR="mt=1;30;43"
 [[ -z "$DISPLAY" ]] && TMOUT=600
@@ -126,7 +126,7 @@ alias la='lsd -la'
 alias cat='bat'
 
 alias ip='ip -c'
-alias ssh-add='ssh-add -t 8h'
+alias ssh-add='ssh-add -t 13h'
 alias sa='ssh-add'
 alias sak='ssh-add ~/.ssh/id_ed25519-kraja'
 alias sap='ssh-add ~/.ssh/id_ed25519-proton'

@@ -11,6 +11,8 @@
 	out = !GIT_PAGER= git log --pretty=oneline --abbrev-commit --graph @{u}..
 	in = !git fetch && GIT_PAGER= git log --pretty=oneline --abbrev-commit --graph ..@{u}
 	count = "!sh -c 'git shortlog -s | awk \"{ SUM += \\$1 } END { print SUM }\"'"
+[diff]
+	colorMoved = default
 [merge]
 	summary = true
 	tool = vimdiff
@@ -31,3 +33,4 @@
 	diffFilter = delta --color-only
 [delta]
 	navigate = true
+	side-by-side = true

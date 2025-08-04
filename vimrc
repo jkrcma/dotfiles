@@ -18,6 +18,13 @@ set background=light
 " completion menu
 set wildmenu
 
+" tabs & indentation
+set tabstop=6
+set softtabstop=0
+set shiftwidth=4
+set smarttab
+set expandtab
+
 " line numbers
 highlight LineNr ctermfg=white cterm=NONE term=NONE
 set number
